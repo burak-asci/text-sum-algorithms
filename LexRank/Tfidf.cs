@@ -11,7 +11,6 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 class Tfidf
 {
-
     static public string Ozetle(string metin, int cumleSayisi)
     {
 
@@ -375,8 +374,4 @@ class Tfidf
         return sonuc;
 
     }
-
-
-
-
 }
