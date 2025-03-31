@@ -31,6 +31,7 @@ class Textrank
         Hesapla(graph, Skor);
         return Sonuc(duzenliCumleler, Skor, cumleSayisi);
     }
+    
     static void Cumlelestir(AdjacencyGraph<int, TaggedEdge<int, double>> graph, string metin, List<string> cumleler)
     {
         string mevcut = metin;
@@ -51,6 +52,7 @@ class Textrank
             else { devam = false; }
         }
     }
+    
     static void Bagla(AdjacencyGraph<int, TaggedEdge<int, double>> graph, List<string> cumleler)
     {
         int i = 0;                                                              // cümle indexOf indexi
@@ -91,6 +93,7 @@ class Textrank
             }
         }
     }
+    
     static void Hesapla(AdjacencyGraph<int, TaggedEdge<int, double>> graph, Double[] Skor)
     {
         for (int i = 0; i < Skor.Length; i++)                                       // skorları 1'le
@@ -130,6 +133,7 @@ class Textrank
 
         }
     }
+    
     static string Sonuc(List<string> cumleler, Double[] Skor, int cumleSayisi)
     {
         SortedList<double, int> bagıntı = new SortedList<double, int>();           // <skor, vertex>  (aynı skorları eklemeyecek!)
@@ -168,6 +172,7 @@ class Textrank
         }
         return ozet;
     }
+    
     static void edgesSkor(AdjacencyGraph<int, TaggedEdge<int, double>> graph, Double[] edgeSkor)
     {
         foreach (var i in graph.Vertices)
@@ -180,6 +185,7 @@ class Textrank
             }
         }
     }
+    
     static void cumleDuzenle(List<string> cumleler)
     {
         for(int i = 0; i < cumleler.Count; i++) 
